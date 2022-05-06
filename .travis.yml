@@ -1,8 +1,0 @@
----
-language: node_js
-branches:
-  only:
-  - master
-# really just an empty build for an empty repo
-script:
-  - echo "A build"
