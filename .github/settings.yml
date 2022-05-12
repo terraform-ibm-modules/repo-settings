@@ -29,4 +29,7 @@ branches:
       enforce_admins: true
       required_status_checks: null
       # Restrict who can merge to this branch
-      restrictions: null
+      restrictions:
+        apps: []
+        users: []
+        teams: [github-mergers]
