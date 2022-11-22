@@ -16,10 +16,6 @@ teams:
     permission: push
   - name: github-collaborators
     permission: push
-  - name: github-doc
-    permission: push
-  - name: github-saf
-    permission: push
   - name: github-admins
     permission: admin
  
