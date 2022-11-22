@@ -1,0 +1,24 @@
+_extends: repo-settings:.github/common-settings.yml
+  
+teams:
+  - name: github-mergers # Use the slug name (!= display name) w/o organization !
+    permission: push
+  - name: github-collaborators
+    permission: push
+  - name: github-admins
+    permission: admin
+  - name: github-sap-admins
+    permission: admin
+  - name: github-sap-mergers
+    permission: push
+ 
+branches:
+  - name: main
+    protection:
+      # Restrict who can merge to this branch
+      restrictions:
+        apps: []
+        users: []
+        teams:
+          - github-mergers
+          - github-sap-mergers

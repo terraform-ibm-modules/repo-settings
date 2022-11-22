@@ -1,0 +1,23 @@
+_extends: repo-settings:.github/settings.yml
+
+teams:
+  - name: github-mergers # Use the slug name (!= display name) w/o organization !
+    permission: push
+  - name: github-collaborators
+    permission: push
+  - name: github-admins
+    permission: admin
+  - name: github-doc-admins
+    permission: admin
+  - name: github-doc-mergers
+    permission: push
+
+branches:
+  - name: main
+    protection:
+      restrictions:
+        apps: []
+        users: []
+        teams:
+          - github-mergers
+          - github-doc-mergers

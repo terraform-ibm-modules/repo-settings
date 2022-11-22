@@ -1,0 +1,9 @@
+_extends: repo-settings:.github/settings.yml
+ 
+branches:
+  - name: main
+    protection:
+      required_status_checks:
+        contexts:
+          - "call-terraform-ci-pipeline / CI Pipeline"
+          - "call-terraform-ci-pipeline / Infrastructure Test"
