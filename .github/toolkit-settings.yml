@@ -22,3 +22,9 @@ branches:
         teams:
           - github-mergers
           - github-toolkit-mergers
+      required_status_checks:
+        contexts:
+          - "call-terraform-ci-pipeline / CI Pipeline"
+          - "call-terraform-ci-pipeline / Infrastructure Test"
+          - "DCO"
+          - "verifyAll"
