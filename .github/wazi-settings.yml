@@ -42,4 +42,4 @@ branches:
         users: []
         teams:
           - github-mergers
-          - github-sap-mergers
+          - github-wazi-mergers
