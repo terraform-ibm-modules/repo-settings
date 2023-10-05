@@ -19,9 +19,9 @@ teams:
     permission: push
   - name: github-admins
     permission: admin
-  - name: github-powerha-admins
+  - name: github-power-admins
     permission: admin
-  - name: github-powerha-mergers
+  - name: github-power-mergers
     permission: push
 
 branches:
@@ -43,4 +43,4 @@ branches:
         users: []
         teams:
           - github-mergers
-          - github-powerha-mergers
+          - github-power-mergers
