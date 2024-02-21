@@ -1,0 +1,46 @@
+# These settings are synced to GitHub by https://probot.github.io/apps/settings/
+repository:
+  # See https://developer.github.com/v3/repos/#edit for all available settings.
+  has_issues: true
+  has_projects: false
+  has_wiki: false
+  has_downloads: true
+  default_branch: main
+  allow_squash_merge: true
+  allow_merge_commit: false
+  allow_rebase_merge: false
+  delete_branch_on_merge: true
+  allow_update_branch: true
+
+teams:
+  - name: github-mergers # Use the slug name (!= display name) w/o organization !
+    permission: push
+  - name: github-collaborators
+    permission: push
+  - name: github-admins
+    permission: admin
+  - name: github-mas-admins
+    permission: admin
+  - name: github-mas-mergers
+    permission: push
+
+branches:
+  - name: main
+    protection:
+      required_pull_request_reviews:
+        required_approving_review_count: 1
+        dismiss_stale_reviews: true
+        require_code_owner_reviews: false
+      enforce_admins: true
+      required_status_checks:
+        strict: true
+        contexts:
+          - "CI Pipeline"
+          - "Infrastructure Test"
+      # Restrict who can merge to this branch
+      restrictions:
+        apps: []
+        users: []
+        teams:
+          - github-mergers
+          - github-mas-mergers
