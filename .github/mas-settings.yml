@@ -19,7 +19,7 @@ teams:
     permission: push
   - name: github-admins
     permission: admin
-  - name: github-mas-admins
+  - name: github-mas-admin
     permission: admin
   - name: github-mas-mergers
     permission: push
@@ -44,4 +44,3 @@ branches:
         teams:
           - github-mergers
           - github-mas-mergers
-          - github-mas-admin
