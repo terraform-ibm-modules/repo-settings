@@ -44,3 +44,4 @@ branches:
         teams:
           - github-mergers
           - github-mas-mergers
+          - github-mas-admin
