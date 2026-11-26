@@ -35,8 +35,19 @@ branches:
       required_status_checks:
         strict: true
         contexts:
-          - "CI Pipeline"
-          - "Infrastructure Test"
+          - "tekton/acceptance-tests"
+          - "tekton/code-approval-ci-run"
+          - "tekton/code-branch-protection"
+          - "tekton/app-preview"
+          - "tekton/code-bom-check"
+          - "tekton/code-checkov"
+          - "tekton/code-detect-secrets"
+          - "tekton/code-static-scan"
+          - "tekton/code-tfsec"
+          - "tekton/code-unit-tests"
+          - "tekton/code-vulnerability-scan"
+          - "tekton/containerize"
+          - "tekton/scan-artifact"
       # Restrict who can merge to this branch
       restrictions:
         apps: []
